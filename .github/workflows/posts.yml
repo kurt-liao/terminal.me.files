@@ -2,7 +2,7 @@ name: Generate Posts
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/6 * * * *"
 
 jobs:
   build:
