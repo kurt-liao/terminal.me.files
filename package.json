@@ -1,0 +1,16 @@
+{
+	"name": "rss-parser",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "node index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"mustache": "^4.2.0",
+		"rss-parser": "^3.12.0"
+	}
+}

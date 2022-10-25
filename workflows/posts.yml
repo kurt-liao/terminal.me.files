@@ -1,0 +1,26 @@
+name: Generate Posts
+
+on:
+  schedule:
+    - cron: "0 6 * * *" 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install modules
+        run: |
+          npm install && npm run build
+      - name: Commit
+        run: |
+          git config --global user.name "kurt-liao"
+          git config --global user.email vermouth0226@gmail.com
+          git add .
+          git commit -am "Generate posts success."
+          git push
